@@ -26,7 +26,7 @@ end
 describe Client do
   describe "tla" do
     def given_tla_is_unavailable(_)
-      Client.create!(:tla => _) unless HasUniqueThreeLetterCode.config.forbidden_codes.include?(_)
+      HasUniqueThreeLetterCode.config.forbidden_codes << _
     end
 
     def given_all_codes_are_taken_that_begin_with(_)
@@ -206,7 +206,7 @@ describe Client do
       HasUniqueThreeLetterCode.config.forbidden_codes = ['ABC']
       Client.new(:name => 'A B C D').should be_assigned_tla('ABD')
     end
-
-    after(:each) { HasUniqueThreeLetterCode.config.reset }
   end
+
+  after(:each) { HasUniqueThreeLetterCode.config.reset }
 end
