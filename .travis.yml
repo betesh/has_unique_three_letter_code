@@ -1,5 +1,4 @@
 before_script:
-  - bundle install
   - mysql -e 'create database myapp_test;'
   - |
     echo "test:
