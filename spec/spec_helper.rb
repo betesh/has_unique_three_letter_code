@@ -10,6 +10,12 @@ Dir[File.expand_path("#{__FILE__}/../support/*.rb")].each { |f| require f }
 
 RSpec.configure do |config|
   config.order = "random"
+  config.before(:suite) do
+    CreateClients.up
+  end
+  config.after(:suite) do
+    CreateClients.down
+  end
   config.around(:each) do |test|
     Client.transaction do
       test.run
