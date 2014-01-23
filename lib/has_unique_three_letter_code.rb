@@ -1,3 +1,4 @@
+require "has_unique_three_letter_code/configuration"
 require "has_unique_three_letter_code/version"
 
 module HasUniqueThreeLetterCode
