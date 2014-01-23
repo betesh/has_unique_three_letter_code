@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "has_unique_three_letter_code"
   spec.version       = HasUniqueThreeLetterCode::VERSION
   spec.authors       = ["Isaac Betesh"]
-  spec.email         = ["ibetesh@springbig.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.email         = ["iybetesh@gmail.com"]
+  spec.description   = "Assigns a case-insensitive unique three-letter code to each record in a scope, based loosely on some other attribute of the record"
+  spec.summary       = `cat README.md`
+  spec.homepage      = "https://github.com/betesh/has_unique_three_letter_code/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
