@@ -1,3 +1,5 @@
+require "simplecov"
+
 require "active_record"
 require "bcdatabase"
 ActiveRecord::Base.establish_connection(Bcdatabase.load[:has_unique_three_letter_code, "test"])
