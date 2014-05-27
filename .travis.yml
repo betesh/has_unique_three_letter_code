@@ -1,9 +1,1 @@
-before_script:
-  - mysql -e 'create database myapp_test;'
-  - |
-    echo "test:
-      adapter: mysql2
-      database: myapp_test
-      username: travis
-      encoding: utf8" > ${HOME}/has_unique_three_letter_code.yml
-script: BCDATABASE_PATH=${HOME} COVERAGE=true rspec
+script: COVERAGE=true rspec

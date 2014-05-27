@@ -1,8 +1,7 @@
 require "simplecov"
 
 require "active_record"
-require "bcdatabase"
-ActiveRecord::Base.establish_connection(Bcdatabase.load[:has_unique_three_letter_code, "test"])
+ActiveRecord::Base.establish_connection(adapter: :sqlite3, database: ":memory:")
 
 require "has_unique_three_letter_code"
 

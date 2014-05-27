@@ -39,23 +39,8 @@ Or install it yourself as:
 
 ## Testing
 
-Create a file at /etc/nubic/db/has_unique_three_letter_code.yml with your database configuration nested under 'test':
-
-Example:
-
-    test:
-      adapter: mysql2
-      encoding: utf8
-      host: ...
-      port: ...
-      database: ...
-      pool: 5
-      username: ...
-      password: ...
-
-Then run:
-
     $ COVERAGE=true rspec
+
 (The environment variable 'COVERAGE' is optional and runs it with simplecov)
 
 ## Future development possibilities
