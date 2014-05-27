@@ -3,7 +3,9 @@ require_relative 'spec_helper'
 describe HasUniqueThreeLetterCode do
   describe "forbidden_codes" do
     def set(_)
-      described_class.config.forbidden_codes=_
+      described_class.configure do |config|
+        config.forbidden_codes = _
+      end
     end
     it "cannot be nil" do
       expect{set(nil)}.to raise_error(ArgumentError, "config.forbidden_codes must be an array of 3-character strings.  For example: `config.forbidden_codes = ['ABC', 'DEF', 'GHI']`")

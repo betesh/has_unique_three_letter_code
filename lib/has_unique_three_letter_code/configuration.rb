@@ -6,7 +6,7 @@ module HasUniqueThreeLetterCode
       @config ||= Configuration.new
     end
     def configure
-      yield @config
+      yield config
     end
   end
 
