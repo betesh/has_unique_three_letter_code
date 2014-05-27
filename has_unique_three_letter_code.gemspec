@@ -24,5 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bcdatabase"
   spec.add_development_dependency "mysql2"
 
-  spec.add_runtime_dependency "activerecord", "~> 3.2.0"
+  spec.add_runtime_dependency "activerecord", ">= 4.0.0"
 end
